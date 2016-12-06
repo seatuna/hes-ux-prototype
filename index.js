@@ -45,3 +45,13 @@ $('#search-input').on('keyup', function(e) {
     search(document.getElementById('search-input').value);
   }
 });
+
+function toggleEventsView(view) {
+  if (view === 'map') {
+    $('.events-list').hide();
+    $('.events-map-view').show();
+  } else {
+    $('.events-list').show();
+    $('.events-map-view').hide();
+  }
+}

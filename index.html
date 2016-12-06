@@ -14,13 +14,13 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <ul class="nav navbar-nav">
-            <li><a href="#home" onclick="hide('home');">Home</a></li>
-            <li><a href="#dashboard" onclick="hide('dashboard');">Dashboard</a></li>
-            <li><a href="#events" onclick="hide('events');">Events</a></li>
-            <li><a href="#people" onclick="hide('people');">People</a></li>
-            <li><a href="#results" onclick="hide('results');">Results</a></li>
-            <li><a href="#login" onclick="hide('login');">Login</a></li>
-            <li><a href="#signup" onclick="hide('signup');">Signup</a></li>
+            <li><a onclick="hide('home');">Home</a></li>
+            <li><a onclick="hide('dashboard');">Dashboard</a></li>
+            <li><a onclick="hide('events');">Events</a></li>
+            <li><a onclick="hide('people');">People</a></li>
+            <li><a onclick="hide('results');">Results</a></li>
+            <li><a onclick="hide('login');">Login</a></li>
+            <li><a onclick="hide('signup');">Signup</a></li>
           </ul>
         </div>
       </div>
@@ -40,14 +40,14 @@
 
     <!-- Events -->
     <div class="events" id="events">
-      <h1>Events</h1>
+      <h1 align="center">Events</h1>
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <div class="event-nav">
           <span class="pull-left">Today</span><br/>
           <span class="pull-left">Location:  Boston, MA</span>
           <span class="event-view-toggle pull-right">
-            <span>List View</span> | <span>Map View</span>
+            <span onclick="toggleEventsView('list')">List View</span> | <span onclick="toggleEventsView('map')">Map View</span>
           </span>
         </div>
         <div class="events-list">
@@ -88,6 +88,9 @@
             </div>
           </div>
         </div>
+        <div class="events-map-view">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.2459617789805!2d-71.06490418483124!3d42.35859717918701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3709b449aae57%3A0x34bfef8d91c79b85!2sChurch+on+the+Hill!5e0!3m2!1sen!2sus!4v1481064912914" width="630" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     <!-- End Events -->
@@ -106,6 +109,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: Captain<br/>
+          Venue: Game Underground</br>
           Email: <a href="mailto:captainppp@gmail.com">captainppp@gmail.com</a><br/>
           Games: Street Fighter<br/>
           Characters: Ryu<br/>
@@ -117,6 +121,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: XMorBust<br/>
+          Venue: Game Underground</br>
           Email: <a href="mailto:xmorbust@gmail.com">xmorbust@gmail.com</a><br/>
           Games: Street Fighter, Mortal Kombat<br/>
           Characters: Vega, Scorpion<br/>
@@ -128,6 +133,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: LuckyD<br/>
+          Venue: Game Underground<br/>
           Email: <a href="mailto:luckyd@gmail.com">luckyd@gmail.com</a><br/>
           Games: Street Fighter<br/>
           Characters: Dhalsim, Cammy<br/>
@@ -139,6 +145,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: Billybilly<br/>
+          Venue: Church on the Hill
           Email: <a href="mailto:billybilly@gmail.com">billybilly@gmail.com</a><br/>
           Games: Super Smash Brothers<br/>
           Characters: Jigglypuff, Link<br/>
@@ -150,6 +157,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: Domokun<br/>
+          Venue: Northeastern University
           Email: <a href="mailto:domokun@gmail.com">domokun@gmail.com</a><br/>
           Games: Mortal Kombat<br/>
           Characters: Raiden<br/>
@@ -161,6 +169,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: Platt<br/>
+          Venue: Harvard Extension School
           Email: <a href="mailto:platt@hes.edu">platt@hes.edu</a><br/>
           Games: Super Smash Brothers<br/>
           Characters: Ice Climbers<br/>
@@ -172,6 +181,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: ILoveRamen<br/>
+          Venue: PCG
           Email: <a href="mailto:ramenlover123@gmail.com">ramenlover123@gmail.com</a><br/>
           Games: Tekken<br/>
           Characters: Roger<br/>
@@ -183,6 +193,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="person-details">
           Name: MrUnicorn<br/>
+          Venue: El Taller
           Email: <a href="mailto:mrunicorn@gmail.com">mrunicorn@gmail.com</a><br/>
           Games: King of Fighters<br/>
           Characters: Iori<br/>
@@ -264,6 +275,7 @@
     $(document).ready(function() {
       hide('home');
       $('#show-all-btn').hide();
+      $('.events-map-view').hide();
     });
   </script>
   </body>
