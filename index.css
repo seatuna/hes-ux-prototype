@@ -2,6 +2,25 @@
   clear: both;
 }
 
+.event-nav {
+  padding: 8px;
+}
+
+.event-view-toggle span {
+  color: #337ab7;
+}
+
+.event-view-toggle span:hover {
+  color: #23527c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fa-picture-o {
+  font-size: 7em;
+  padding: 10px;
+}
+
 .fa-user {
   font-size: 5em;
   padding: 30px;
@@ -17,14 +36,18 @@
   margin-top: 100px;
 }
 
-.person {
+.person, .event {
   border: 1px solid #000;
   display: inline-flex;
   margin: 8px;
   width: 400px;
 }
 
-.person-details {
+.event {
+  width: 100%;
+}
+
+.person-details, .event-details {
   padding: 10px;
 }
 
