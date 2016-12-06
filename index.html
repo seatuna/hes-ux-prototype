@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
     <title>FightLog</title>
   </head>
   <body>
@@ -13,6 +15,7 @@
         <div class="navbar-header">
           <ul class="nav navbar-nav">
             <li><a href="#home" onclick="hide('home');">Home</a></li>
+            <li><a href="#home" onclick="hide('dashboard');">Dashboard</a></li>
             <li><a href="#events" onclick="hide('events');">Events</a></li>
             <li><a href="#people" onclick="hide('people');">People</a></li>
             <li><a href="#events" onclick="hide('events');">Events</a></li>
@@ -30,6 +33,12 @@
     </div>
     <!-- End Home -->
 
+    <!-- Dashboard -->
+    <div class="dashboard" id="dashboard">
+      <h1>Dashboard</h1>
+    </div>
+    <!-- End Dashboard -->
+
     <!-- Events -->
     <div class="events" id="events">
       <h1>Events</h1>
@@ -37,9 +46,94 @@
     <!-- End Events -->
 
     <!-- People -->
-    <div class="people" id="people">
+    <div class="people" id="people" align="center">
       <h1>People</h1>
+      <div class="col-md-2"></div>
+      <div class="col-md-8 search-input">
+        <input class="form-control" id="search-input" placeholder="Search">
+        <button class="btn btn-primary" onclick="search(document.getElementById('search-input').value)"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+      <div class="clear"></div>
+      <button class="btn" id="show-all-btn" onclick="search('')">Show all</button><br/>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: Captain<br/>
+          Email: <a href="mailto:captainppp@gmail.com">captainppp@gmail.com</a><br/>
+          Games: Street Fighter<br/>
+          Characters: Ryu<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @captainp</a>
+        </div>
+      </div>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: XMorBust<br/>
+          Email: <a href="mailto:xmorbust@gmail.com">xmorbust@gmail.com</a><br/>
+          Games: Street Fighter, Mortal Kombat<br/>
+          Characters: Vega, Scorpion<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @XMorBust</a>
+        </div>
+      </div>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: LuckyD<br/>
+          Email: <a href="mailto:luckyd@gmail.com">luckyd@gmail.com</a><br/>
+          Games: Street Fighter<br/>
+          Characters: Dhalsim, Cammy<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @fortunatedaniel</a>
+        </div>
+      </div>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: Billybilly<br/>
+          Email: <a href="mailto:billybilly@gmail.com">billybilly@gmail.com</a><br/>
+          Games: Super Smash Brothers<br/>
+          Characters: Jigglypuff, Link<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @billypuff</a>
+        </div>
+      </div>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: Domokun<br/>
+          Email: <a href="mailto:domokun@gmail.com">domokun@gmail.com</a><br/>
+          Games: Mortal Kombat<br/>
+          Characters: Raiden<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @domokun</a>
+        </div>
+      </div>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: Platt<br/>
+          Email: <a href="mailto:platt@hes.edu">platt@hes.edu</a><br/>
+          Games: Super Smash Brothers<br/>
+          Characters: Ice Climbers<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @uxplatt</a>
+        </div>
+      </div>
+      <div class="person">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="person-details">
+          Name: ILoveRamen<br/>
+          Email: <a href="mailto:ramenlover123@gmail.com">ramenlover123@gmail.com</a><br/>
+          Games: Tekken<br/>
+          Characters: Roger<br/>
+          <a href="www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a><br/>
+          <a href="www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i> @iloveramen123</a>
+        </div>
+      </div>
     </div>
+  </div>
     <!-- End People -->
 
     <!-- Results -->
@@ -113,7 +207,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="./index.js" type="text/javascript"></script>
   <script>
-    
+    $(document).ready(function() {
+      hide('home');
+      $('#show-all-btn').hide();
+    })
   </script>
   </body>
 </html>

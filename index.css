@@ -1,0 +1,24 @@
+.clear {
+  clear: both;
+}
+
+.fa-user {
+  font-size: 5em;
+  padding: 30px;
+}
+
+.person {
+  border: 1px solid #000;
+  display: inline-flex;
+  margin: 8px;
+  width: 400px;
+}
+
+.person-details {
+  padding: 10px;
+}
+
+.search-input {
+  display: inline-flex;
+  padding: 20px;
+}
