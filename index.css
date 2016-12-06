@@ -7,6 +7,16 @@
   padding: 30px;
 }
 
+.home img {
+  margin-top: -100px;
+  position: fixed;
+  z-index: -1;
+}
+
+.login {
+  margin-top: 100px;
+}
+
 .person {
   border: 1px solid #000;
   display: inline-flex;

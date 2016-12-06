@@ -38,3 +38,10 @@ function search(query) {
     }
   }
 }
+
+$('#search-input').on('keyup', function(e) {
+  if (e.keyCode === 13) {
+    console.log('search');
+    search(document.getElementById('search-input').value);
+  }
+});
