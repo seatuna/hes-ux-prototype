@@ -46,6 +46,16 @@ $('#search-input').on('keyup', function(e) {
   }
 });
 
+$('#entrantsNumberInput').on('keyup', function(e) {
+  $('.entrants').empty();
+  var entrants = document.getElementById('entrantsNumberInput').value;
+  for (var i = 1; i <= entrants; i++) {
+    var entryDiv = '<div class="form-group"><label>' + i + '. ' + '</label><input type="game" class="form-control" id="entrant' + i + '" placeholder="Name"></div>';
+    $('.entrants').append(entryDiv);
+  }
+  console.log(document.getElementById('entrantsNumberInput').value);
+});
+
 function toggleEventsView(view) {
   if (view === 'map') {
     $('.events-list').hide();

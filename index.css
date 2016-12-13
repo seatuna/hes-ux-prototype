@@ -1,3 +1,7 @@
+body {
+  background-color: #c7ebf7;
+}
+
 .clear {
   clear: both;
 }
@@ -26,10 +30,24 @@
   padding: 30px;
 }
 
+.game-dropdown {
+  margin-top: 20px;
+}
+
 .home img {
   margin-top: -100px;
   position: fixed;
   z-index: -1;
+}
+
+.home h1 {
+  border: 10px double white;
+  color: white;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+  width: 400px;
 }
 
 .login {
@@ -41,6 +59,7 @@
 }
 
 .person, .event {
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #000;
   display: inline-flex;
   margin: 8px;
@@ -55,7 +74,21 @@
   padding: 10px;
 }
 
+.people-container {
+  margin: auto;
+  padding: 0 10px;
+  width: 856px;
+}
+
 .search-input {
   display: inline-flex;
   padding: 20px;
+}
+
+.signup {
+  margin-top: 75px;
+}
+
+.t-results-entry-form .form-group {
+  display: flex;
 }
