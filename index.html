@@ -35,10 +35,10 @@
 
     <!-- Dashboard -->
     <div class="dashboard" id="dashboard">
-      <h1>Dashboard</h1>
-      <h3 align="center">Enter Tournament Results</h3>
+      <h1 align="center">Dashboard</h1>
       <div class="col-md-2"></div>
       <div class="col-md-8">
+        <h4>Enter Tournament Results</h4><br/>
         <form class="t-results-entry-form">
           <div class="form-group">
             <label for="tournamentNameInput">Tournament Name</label>
@@ -54,7 +54,9 @@
           </div>
           <div class="entrants"></div>
         </form>
-        <button class="btn btn-primary pull-right">Submit</button>
+        <div class="submit-success">
+          <span align="center">Tournament results successfully posted!</span>
+        </div>
       </div>
     </div>
     <!-- End Dashboard -->
@@ -230,7 +232,157 @@
 
     <!-- Results -->
     <div class="results" id="results">
-      <h1>Results</h1>
+      <h1 align="center">Results</h1>
+      <div class="tourney-1 col-md-8 col-md-offset-2">
+        <h3 onclick="toggleTable(tournament1)">Tournament 1</h3>
+        <h4 onclick="toggleTable(tournament1)">@ Game Underground</h4>
+        <table class="table table-striped table-condensed" id="tournament1">
+          <thead class="thead-inverse">
+            <tr>
+              <th>#</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Captain</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>XMorBust</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Mario</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Luigi</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Jacob</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Princess Peach</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Toad</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Bowser</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>Goomba</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tourney-2 col-md-8 col-md-offset-2">
+        <h3 onclick="toggleTable(tournament2)">Tournament 2</h3>
+        <h4 onclick="toggleTable(tournament2)">@ Church on the Hill</h4>
+        <table class="table table-striped table-condensed" id="tournament2">
+          <thead class="thead-inverse">
+            <tr>
+              <th>#</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Captain</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Santa</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Rosalina</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Luigi</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>ChristmasTr33</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Princess Peach</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>PommyThePenguin</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Lakitu</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>MushroomKing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tourney-3 col-md-8 col-md-offset-2">
+        <h3 onclick="toggleTable(tournament3)">Tournament 1</h3>
+        <h4 onclick="toggleTable(tournament3)">@ PCG</h4>
+        <table class="table table-striped table-condensed" id="tournament3">
+          <thead class="thead-inverse">
+            <tr>
+              <th>#</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>XMorBust</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>PommyThePenguin</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Luigi</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Bowser</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>TargetWalmart</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>FrostyTheSnowman</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>PotatoChipus</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>NomNomNom</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>Goomba</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <!-- End Results -->
 
@@ -303,6 +455,9 @@
       hide('home');
       $('#show-all-btn').hide();
       $('.events-map-view').hide();
+      $('.entrants').hide();
+      $('.submit-success').hide();
+      $('table').hide();
     });
   </script>
   </body>

@@ -1,5 +1,5 @@
 body {
-  background-color: #c7ebf7;
+  background-color: #14b4e7;
 }
 
 .clear {
@@ -89,6 +89,22 @@ body {
   margin-top: 75px;
 }
 
-.t-results-entry-form .form-group {
+.submit-success {
+  background-color: #aee697;
+  padding: 50px;
+}
+
+.entrants {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 50px;
+  padding: 15px 15px 50px;
+}
+
+.t-results-entry-form .entry {
   display: flex;
+  margin: 25px 0;
+}
+
+.entry label {
+  margin-right: 10px;
 }

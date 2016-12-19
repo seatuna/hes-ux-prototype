@@ -46,13 +46,21 @@ $('#search-input').on('keyup', function(e) {
   }
 });
 
+function submitForm() {
+  $('.entrants').hide();
+  $('.submit-success').show();
+}
+
 $('#entrantsNumberInput').on('keyup', function(e) {
+  $('.entrants').show();
   $('.entrants').empty();
   var entrants = document.getElementById('entrantsNumberInput').value;
+  $('.entrants').append('<h4>Entrants and Placement</h4>');
   for (var i = 1; i <= entrants; i++) {
-    var entryDiv = '<div class="form-group"><label>' + i + '. ' + '</label><input type="game" class="form-control" id="entrant' + i + '" placeholder="Name"></div>';
+    var entryDiv = '<div class="form-group entry"><label>' + i + '. ' + '</label><input type="game" class="form-control" id="entrant' + i + '" placeholder="Name"></div>';
     $('.entrants').append(entryDiv);
   }
+  $('.entrants').append('<div class="btn btn-primary pull-right" id="submit-btn" onclick="submitForm()">Submit</div>');
   console.log(document.getElementById('entrantsNumberInput').value);
 });
 
@@ -64,4 +72,13 @@ function toggleEventsView(view) {
     $('.events-list').show();
     $('.events-map-view').hide();
   }
+}
+
+function toggleTable(tableID) {
+  // if (!document.getElementById(tableID)) {
+  //   $(tableID).show();
+  // } else if (document.getElementById(tableID)) {
+  //   $(tableID).hide();
+  // }
+  $(tableID).toggle();
 }
